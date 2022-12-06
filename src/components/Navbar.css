@@ -1,0 +1,111 @@
+.navItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: indianred;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  top: 20px;
+  padding: 5px 15px;
+  width: 95%;
+  position: fixed;
+  height: 80px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.logo {
+  color: white;
+}
+.fa-react {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.itemInline {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  margin-right: 15px;
+  padding: 0.7rem 1rem;
+  list-style: none;
+}
+.cls {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  white-space: nowrap;
+  padding: 10px 10px;
+  align-items: center;
+}
+.cls i {
+  padding-right: 10px;
+}
+.cls:hover {
+  background: burlywood;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.cls_mobile {
+  background-color: brown;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+.barCross {
+  color: white;
+}
+.fa-bars {
+  font-weight: 900;
+}
+.fa-xmark {
+  font-weight: 900;
+}
+.barCross {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  .navItem {
+    z-index: 99;
+  }
+  .itemInline {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -110%;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .itemInline.active {
+    left: 0%;
+  }
+  .cls {
+    display: block;
+    widows: 100%;
+    padding: 2rem;
+    /* color: rgb(122, 85, 85); */
+    color: black;
+  }
+  .cls:hover {
+    background-color: rgb(238, 238, 238);
+    backdrop-filter: blur(20px);
+  }
+  .barCross {
+    display: block;
+  }
+}
